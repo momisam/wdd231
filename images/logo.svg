@@ -1,0 +1,19 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Sun core -->
+  <circle cx="24" cy="24" r="10" fill="#FFD93B"></circle>
+
+  <!-- Rays -->
+  <line x1="24" y1="2" x2="24" y2="10" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="24" y1="38" x2="24" y2="46" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+
+  <line x1="2" y1="24" x2="10" y2="24" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="38" y1="24" x2="46" y2="24" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+
+  <line x1="8" y1="8" x2="14" y2="14" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="34" y1="34" x2="40" y2="40" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+
+  <line x1="8" y1="40" x2="14" y2="34" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="34" y1="14" x2="40" y2="8" stroke="#FFD93B" stroke-width="4" stroke-linecap="round"></line>
+
+</svg>

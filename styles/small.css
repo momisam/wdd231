@@ -1,5 +1,5 @@
 body{
-font-family: Arial;
+font-family:'Roboto', sans-serif;
 margin:0;
 background:#e5e5e5;
 }
@@ -41,6 +41,7 @@ padding:1rem;
 text-decoration:none;
 border-bottom:1px solid #444;
 }
+
 
 nav.open{
 display:flex;
