@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<meta charset="UTF-8">
+<meta name="description" content="WDD231 Student Home Page">
+<meta name="author" content="Student Name">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WDD231 Course Home</title>
+
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+
 </head>
+
 <body>
-    
+
+<header>
+
+<div class="logo">
+<img src="images/logo.svg" alt="site logo">
+<span>Site Name</span>
+</div>
+
+<button id="menu">☰</button>
+
+</header>
+
+<nav id="navMenu">
+
+<a href="#">Home</a>
+<a href="#">Chamber Project</a>
+<a href="#">Final Project</a>
+
+</nav>
+
+<main>
+
+<h1>Home</h1>
+
+<div class="grid">
+
+<section class="card">
+
+<h2>About Me</h2>
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Quam fugiat amet veniam dolores temporibus officia 
+doloribus cumque porro recusandae facilis.
+</p>
+
+</section>
+
+<section class="card">
+
+<h2>Student Photo</h2>
+
+<img src="images/photo.jpg" alt="student photo">
+
+</section>
+
+</div>
+
+<section class="courses">
+
+<h2>Web Certificate Courses</h2>
+
+<div class="buttons">
+
+<button id="all">All</button>
+<button id="cse">CSE</button>
+<button id="wdd">WDD</button>
+
+</div>
+
+<div id="courseContainer"></div>
+
+<p id="credits"></p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="social">
+
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
+<a href="#">X</a>
+
+</div>
+
+<p>
+© <span id="year"></span> Student Name • Utah, USA
+</p>
+
+<p id="lastModified"></p>
+
+</footer>
+
 </body>
 </html>
