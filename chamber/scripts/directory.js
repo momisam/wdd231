@@ -26,6 +26,11 @@ function displayMembers(members) {
     });
 }
 
+
+// FOOTER DATES
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = "Last Modified: " + document.lastModified;
+
 getMembers();
 
 
@@ -49,10 +54,27 @@ card.innerHTML = `
     <a href="${member.website}" target="_blank">Visit</a>
 `;
 
+document.querySelector("#listView").addEventListener("click", () => {
+    container.classList.add("list");
+    container.classList.remove("grid");
 
+    document.querySelectorAll(".card img").forEach(img => {
+        img.style.display = "none";
+    });
+});
 
+document.querySelector("#gridView").addEventListener("click", () => {
+    container.classList.add("grid");
+    container.classList.remove("list");
 
+    document.querySelectorAll(".card img").forEach(img => {
+        img.style.display = "block";
+    });
+});
 
-// FOOTER DATES
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = "Last Modified: " + document.lastModified;
+async function getMembers() {
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    displayMembers(data);
+}
+

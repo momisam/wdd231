@@ -17,6 +17,16 @@ nav ul.show {
     display: block;
 }
 
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -64,6 +74,8 @@ nav ul.show {
     color: #004080;
 }
 
+
+
 .card a {
     display: inline-block;
     margin-top: 0.5rem;
@@ -86,6 +98,9 @@ nav ul.show {
     height: 100px;
 }
 
+.card {
+    min-height: 300px;
+}
 
 footer {
     text-align: center;
