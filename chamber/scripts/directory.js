@@ -41,6 +41,18 @@ document.querySelector("#listView").addEventListener("click", () => {
 });
 
 
+card.innerHTML = `
+    <img src="images/${member.image}" alt="${member.name}" loading="lazy">
+    <h3>${member.name}</h3>
+    <p>${member.address}</p>
+    <p>${member.phone}</p>
+    <a href="${member.website}" target="_blank">Visit</a>
+`;
+
+
+
+
+
 // FOOTER DATES
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = "Last Modified: " + document.lastModified;

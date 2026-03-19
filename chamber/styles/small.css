@@ -32,3 +32,11 @@ nav ul.show {
     padding: 1rem;
     text-align: center;
 }
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #002b5c;
+    color: #fff;
+    font-size: 0.9rem;
+}
