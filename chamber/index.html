@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Chamber of Commerce</title>
+
+    <meta name="description" content="Welcome to the Chamber of Commerce. Discover local businesses, events, and opportunities to grow.">
+    <meta name="author" content="Femi S. Moses">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber of Commerce Home Page">
+    <meta property="og:description" content="Explore local businesses, weather updates, and featured members.">
+    <meta property="og:image" content="https://momisam.github.io/wdd231/chamber/images/favicon.png">
+    <meta property="og:url" content="https://momisam.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JS -->
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Lagos Chamber of Commerce</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+  <!-- HERO + CTA -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Lagos city skyline showing vibrant business community">
+    <div class="hero-text">
+      <h2>Empowering Local Businesses</h2>
+      <p>Connect, grow, and thrive with the Lagos Chamber of Commerce.</p>
+      <a href="join.html" class="cta">Join the Chamber</a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY / EVENTS -->
+  <section class="events">
+    <h2>Community Events</h2>
+    <p>Join our upcoming networking event and connect with top business leaders in Lagos.</p>
+  </section>
+
+  <!-- WEATHER -->
+  <section class="weather">
+    <h2>Current Weather</h2>
+    <p>Temperature: <span id="temp"></span>°C</p>
+    <p>Condition: <span id="desc"></span></p>
+
+    <h3>3-Day Forecast</h3>
+    <div id="forecast"></div>
+  </section>
+
+  <!-- SPOTLIGHTS -->
+  <section class="spotlights">
+    <h2>Business Spotlights</h2>
+    <p>Meet some of our featured Gold and Silver members.</p>
+    <div id="spotlight-container"></div>
+  </section>
+
+</main>
+
+<footer>
+    <p>Contact: info@lagoschamber.com | +234 8104643664</p>
+    <p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
