@@ -36,7 +36,7 @@
         margin: 0;
     }
 
-    /* HOVER EFFECT */
+    /* NAV HOVER EFFECT */
     nav a {
         position: relative;
     }
@@ -56,14 +56,28 @@
         width: 100%;
     }
 
-    /* GRID LAYOUT */
+    /* DIRECTORY GRID */
     #members.grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* BUTTONS ALIGN */
+    /* BUTTON ALIGN */
     .view-buttons {
         display: flex;
         justify-content: flex-end;
+    }
+
+    /* HOME PAGE GRID */
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* SPOTLIGHT GRID */
+    .spotlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }
