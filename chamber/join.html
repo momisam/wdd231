@@ -57,70 +57,50 @@
 <!-- ================= FORM ================= -->
 <form method="get" action="thankyou.html">
 
-<label>
-First Name
-<input type="text" name="firstname"
-required
-title="Enter your first name"
+<label for="firstname">First Name</label>
+<input id="firstname" type="text" name="firstname"
+required title="Enter your first name"
 autocomplete="given-name">
-</label>
 
-<label>
-Last Name
-<input type="text" name="lastname"
-required
-title="Enter your last name"
+<label for="lastname">Last Name</label>
+<input id="lastname" type="text" name="lastname"
+required title="Enter your last name"
 autocomplete="family-name">
-</label>
 
-<label>
-Organization Title
-<input type="text" name="orgtitle"
+<label for="orgtitle">Organization Title</label>
+<input id="orgtitle" type="text" name="orgtitle"
 pattern="[A-Za-z\\-\\s]{7,}"
-title="Minimum 7 characters (letters, spaces, hyphens)"
+title="Minimum 7 characters"
 autocomplete="organization-title">
-</label>
 
-<label>
-Email Address
-<input type="email" name="email"
-required
-title="Enter your email address"
+<label for="email">Email Address</label>
+<input id="email" type="email" name="email"
+required title="Enter your email address"
 placeholder="example@email.com"
 autocomplete="email">
-</label>
 
-<label>
-Mobile Phone
-<input type="tel" name="phone"
-required
-title="Enter your mobile phone number"
+<label for="phone">Mobile Phone</label>
+<input id="phone" type="tel" name="phone"
+required title="Enter your mobile phone number"
 autocomplete="tel">
-</label>
 
-<label>
-Business Name
-<input type="text" name="business"
-required
-title="Enter your business or organization name"
+<label for="business">Business Name</label>
+<input id="business" type="text" name="business"
+required title="Enter your business or organization name"
 autocomplete="organization">
-</label>
 
-<label>
-Membership Level
-<select name="membership" title="Select membership level">
+<label for="membership">Membership Level</label>
+<select id="membership" name="membership"
+title="Select membership level">
 <option value="np">NP Membership</option>
 <option value="bronze">Bronze Membership</option>
 <option value="silver">Silver Membership</option>
 <option value="gold">Gold Membership</option>
 </select>
-</label>
 
-<label>
-Business Description
-<textarea name="description"
+<label for="description">Business Description</label>
+<textarea id="description" name="description"
 title="Describe your business or organization"></textarea>
-</label>
 
 <input type="hidden" id="timestamp" name="timestamp">
 
