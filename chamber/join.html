@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- REQUIRED META -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Join Lagos Chamber of Commerce</title>
 
-<meta name="description" content="Apply to join the Lagos Chamber of Commerce and grow your business network.">
+<meta name="description" content="Apply to join the Lagos Chamber of Commerce and grow your business network in Lagos.">
 <meta name="author" content="Femi S. Moses">
 
 <link rel="icon" href="images/favicon.ico">
 
-<!-- Open Graph -->
+<!-- OPEN GRAPH -->
 <meta property="og:title" content="Join Lagos Chamber of Commerce">
-<meta property="og:description" content="Apply for membership and connect with businesses in Lagos.">
+<meta property="og:description" content="Apply for membership and connect with Lagos businesses and opportunities.">
 <meta property="og:image" content="https://momisam.github.io/wdd231/chamber/images/hero.jpg">
 <meta property="og:url" content="https://momisam.github.io/wdd231/chamber/join.html">
 
-<!-- Google Fonts -->
+<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<!-- CSS -->
+<!-- CSS (MUST BE 2 FILES MINIMUM) -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
 
-<!-- JS -->
+<!-- EXTERNAL JS -->
 <script src="scripts/join.js" defer></script>
 
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>Lagos Chamber of Commerce</h1>
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -46,12 +50,14 @@
   </nav>
 </header>
 
+<!-- MAIN -->
 <main>
 
 <h2>Membership Application</h2>
 
 <div class="layout">
 
+<!-- FORM -->
 <form method="get" action="thankyou.html">
 
 <label>
@@ -73,7 +79,7 @@ autocomplete="organization-title">
 </label>
 
 <label>
-Email
+Email Address
 <input type="email" name="email" required placeholder="example@email.com" autocomplete="email">
 </label>
 
@@ -91,9 +97,9 @@ Business Name
 Membership Level
 <select name="membership">
 <option value="np">NP Membership</option>
-<option value="bronze">Bronze</option>
-<option value="silver">Silver</option>
-<option value="gold">Gold</option>
+<option value="bronze">Bronze Membership</option>
+<option value="silver">Silver Membership</option>
+<option value="gold">Gold Membership</option>
 </select>
 </label>
 
@@ -108,7 +114,7 @@ Business Description
 
 </form>
 
-<!-- CARDS -->
+<!-- MEMBERSHIP CARDS -->
 <div class="cards">
   <div class="card"><h3>NP</h3><button data-modal="npModal">Benefits</button></div>
   <div class="card"><h3>Bronze</h3><button data-modal="bronzeModal">Benefits</button></div>
@@ -119,16 +125,40 @@ Business Description
 </div>
 
 <!-- MODALS -->
-<div id="npModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p>Free membership</p></div></div>
-<div id="bronzeModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p>Basic benefits</p></div></div>
-<div id="silverModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p>Advanced benefits</p></div></div>
-<div id="goldModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p>Premium benefits</p></div></div>
+<div id="npModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Free membership with basic networking.</p>
+  </div>
+</div>
+
+<div id="bronzeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Basic benefits and event discounts.</p>
+  </div>
+</div>
+
+<div id="silverModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Advanced training and spotlight ads.</p>
+  </div>
+</div>
+
+<div id="goldModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Premium benefits and VIP exposure.</p>
+  </div>
+</div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-<p>&copy; <span id="year"></span> | Femi S. Moses</p>
-<p id="lastModified"></p>
+  <p>&copy; <span id="year"></span> | Femi S. Moses | WDD 231</p>
+  <p id="lastModified"></p>
 </footer>
 
 </body>

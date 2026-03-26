@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent = document.lastModified;
 
-  // Modals
+  // Modal Logic
   const buttons = document.querySelectorAll("[data-modal]");
   const modals = document.querySelectorAll(".modal");
   const closes = document.querySelectorAll(".close");
