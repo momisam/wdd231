@@ -81,3 +81,21 @@
         gap: 1rem;
     }
 }
+
+/* =========================
+   JOIN PAGE LAYOUT
+========================= */
+
+.layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+form {
+    flex: 1;
+}
+
+.cards {
+    flex: 1;
+}

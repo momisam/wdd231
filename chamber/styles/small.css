@@ -215,3 +215,69 @@ footer {
     color: #fff;
     font-size: 0.9rem;
 }
+
+/* =========================
+   JOIN PAGE FORM
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background: #004080;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #002b5c;
+}
+
+
+.cards {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #ffd166;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
