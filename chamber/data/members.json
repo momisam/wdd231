@@ -5,7 +5,7 @@
       "address": "12 Allen Avenue, Ikeja, Lagos",
       "phone": "+2348012345678",
       "website": "https://techsolutions.ng",
-      "image": "images/tech.jpg",
+      "image": "tech.jpg",
       "membership": 3,
       "email": "info@techsolutions.ng"
     },
@@ -14,7 +14,7 @@
       "address": "Km 5 Ibadan Road, Oyo",
       "phone": "+2348098765432",
       "website": "https://greenfarms.ng",
-      "image": "images/farm.jpg",
+      "image": "farm.jpg",
       "membership": 2,
       "email": "contact@greenfarms.ng"
     },
@@ -23,7 +23,7 @@
       "address": "Plot 8 Apapa Wharf, Lagos",
       "phone": "+2348034567890",
       "website": "https://swiftlogistics.ng",
-      "image": "images/logistics.jpg",
+      "image": "logistics.jpg",
       "membership": 1,
       "email": "support@swiftlogistics.ng"
     },
@@ -32,7 +32,7 @@
       "address": "23 Aba Market Road, Abia",
       "phone": "+2348123456789",
       "website": "https://brightfashion.ng",
-      "image": "images/fashion.jpg",
+      "image": "fashion.jpg",
       "membership": 2,
       "email": "sales@brightfashion.ng"
     },
@@ -41,7 +41,7 @@
       "address": "15 Garki District, Abuja",
       "phone": "+2348067891234",
       "website": "https://primebuilders.ng",
-      "image": "images/construction.jpg",
+      "image": "construction.jpg",
       "membership": 3,
       "email": "info@primebuilders.ng"
     },
@@ -50,7 +50,7 @@
       "address": "10 Admiralty Way, Lekki, Lagos",
       "phone": "+2348076543210",
       "website": "https://freshmart.ng",
-      "image": "images/supermarket.jpg",
+      "image": "supermarket.jpg",
       "membership": 1,
       "email": "hello@freshmart.ng"
     },
@@ -59,7 +59,7 @@
       "address": "7 University Road, Ilorin",
       "phone": "+2348051122334",
       "website": "https://edusmart.ng",
-      "image": "images/school.jpg",
+      "image": "school.jpg",
       "membership": 2,
       "email": "admin@edusmart.ng"
     }
