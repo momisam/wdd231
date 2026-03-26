@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 
-<!-- REQUIRED META -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,30 +12,29 @@
 
 <link rel="icon" href="images/favicon.ico">
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Join Lagos Chamber of Commerce">
+<!-- Open Graph -->
+<meta property="og:title" content="Join the Lagos Chamber of Commerce Today">
 <meta property="og:description" content="Apply for membership and connect with Lagos businesses and opportunities.">
 <meta property="og:image" content="https://momisam.github.io/wdd231/chamber/images/hero.jpg">
 <meta property="og:url" content="https://momisam.github.io/wdd231/chamber/join.html">
 
-<!-- GOOGLE FONTS -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<!-- CSS (MUST BE 2 FILES MINIMUM) -->
+<!-- CSS -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
 
-<!-- EXTERNAL JS -->
+<!-- JS -->
 <script src="scripts/join.js" defer></script>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <h1>Lagos Chamber of Commerce</h1>
 
@@ -50,52 +48,67 @@
   </nav>
 </header>
 
-<!-- MAIN -->
 <main>
 
 <h2>Membership Application</h2>
 
 <div class="layout">
 
-<!-- FORM -->
+<!-- ================= FORM ================= -->
 <form method="get" action="thankyou.html">
 
 <label>
 First Name
-<input type="text" name="firstname" required title="First Name" autocomplete="given-name">
+<input type="text" name="firstname"
+required
+title="Enter your first name"
+autocomplete="given-name">
 </label>
 
 <label>
 Last Name
-<input type="text" name="lastname" required title="Last Name" autocomplete="family-name">
+<input type="text" name="lastname"
+required
+title="Enter your last name"
+autocomplete="family-name">
 </label>
 
 <label>
 Organization Title
 <input type="text" name="orgtitle"
 pattern="[A-Za-z\\-\\s]{7,}"
-title="Minimum 7 characters"
+title="Minimum 7 characters (letters, spaces, hyphens)"
 autocomplete="organization-title">
 </label>
 
 <label>
 Email Address
-<input type="email" name="email" required placeholder="example@email.com" autocomplete="email">
+<input type="email" name="email"
+required
+title="Enter your email address"
+placeholder="example@email.com"
+autocomplete="email">
 </label>
 
 <label>
 Mobile Phone
-<input type="tel" name="phone" required autocomplete="tel">
+<input type="tel" name="phone"
+required
+title="Enter your mobile phone number"
+autocomplete="tel">
 </label>
 
 <label>
 Business Name
-<input type="text" name="business" required autocomplete="organization">
+<input type="text" name="business"
+required
+title="Enter your business or organization name"
+autocomplete="organization">
 </label>
 
 <label>
 Membership Level
-<select name="membership">
+<select name="membership" title="Select membership level">
 <option value="np">NP Membership</option>
 <option value="bronze">Bronze Membership</option>
 <option value="silver">Silver Membership</option>
@@ -105,7 +118,8 @@ Membership Level
 
 <label>
 Business Description
-<textarea name="description"></textarea>
+<textarea name="description"
+title="Describe your business or organization"></textarea>
 </label>
 
 <input type="hidden" id="timestamp" name="timestamp">
@@ -114,48 +128,62 @@ Business Description
 
 </form>
 
-<!-- MEMBERSHIP CARDS -->
+<!-- ================= CARDS ================= -->
 <div class="cards">
-  <div class="card"><h3>NP</h3><button data-modal="npModal">Benefits</button></div>
-  <div class="card"><h3>Bronze</h3><button data-modal="bronzeModal">Benefits</button></div>
-  <div class="card"><h3>Silver</h3><button data-modal="silverModal">Benefits</button></div>
-  <div class="card"><h3>Gold</h3><button data-modal="goldModal">Benefits</button></div>
+  <div class="card">
+    <h3>NP Membership</h3>
+    <button data-modal="npModal">View Benefits</button>
+  </div>
+
+  <div class="card">
+    <h3>Bronze Membership</h3>
+    <button data-modal="bronzeModal">View Benefits</button>
+  </div>
+
+  <div class="card">
+    <h3>Silver Membership</h3>
+    <button data-modal="silverModal">View Benefits</button>
+  </div>
+
+  <div class="card">
+    <h3>Gold Membership</h3>
+    <button data-modal="goldModal">View Benefits</button>
+  </div>
 </div>
 
 </div>
 
-<!-- MODALS -->
+<!-- ================= MODALS ================= -->
 <div id="npModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Free membership with basic networking.</p>
+    <p>Free membership with basic networking opportunities.</p>
   </div>
 </div>
 
 <div id="bronzeModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Basic benefits and event discounts.</p>
+    <p>Access to events and basic advertising benefits.</p>
   </div>
 </div>
 
 <div id="silverModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Advanced training and spotlight ads.</p>
+    <p>Training programs, event discounts, and spotlight features.</p>
   </div>
 </div>
 
 <div id="goldModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Premium benefits and VIP exposure.</p>
+    <p>Premium exposure, VIP events, and homepage spotlight advertising.</p>
   </div>
 </div>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <p>&copy; <span id="year"></span> | Femi S. Moses | WDD 231</p>
   <p id="lastModified"></p>
