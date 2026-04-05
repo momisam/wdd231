@@ -1,6 +1,7 @@
 // ==============================
 // CONFIG
 // ==============================
+// NOTE: API key exposed for educational purposes only
 const apiKey = "121542dbb760e793ac5cbe5b192191bc";
 const lat = 6.52;
 const lon = 3.37;
@@ -23,16 +24,28 @@ async function getWeather() {
     if (!res.ok) throw new Error("Weather fetch failed");
 
     const data = await res.json();
-
     if (data.cod !== 200) throw new Error(data.message);
 
     if (tempEl && descEl) {
-      tempEl.textContent = Math.round(data.main.temp);
-      descEl.textContent = data.weather[0].description;
+      const temp = Math.round(data.main.temp);
+      const desc = data.weather[0].description;
+      const icon = data.weather[0].icon;
+
+      const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+      tempEl.textContent = temp;
+
+      descEl.innerHTML = `
+        <img src="${iconURL}" alt="${desc}">
+        ${desc}
+      `;
     }
 
   } catch (err) {
     console.error("Weather error:", err);
+
+    const tempEl = document.getElementById("temp");
+    if (tempEl) tempEl.textContent = "Weather unavailable";
   }
 }
 
@@ -51,7 +64,6 @@ async function getForecast() {
     if (!res.ok) throw new Error("Forecast fetch failed");
 
     const data = await res.json();
-
     if (data.cod !== "200") throw new Error(data.message);
 
     forecastDiv.innerHTML = "";
@@ -67,16 +79,22 @@ async function getForecast() {
 
       const temp = Math.round(day.main.temp);
 
-      forecastDiv.innerHTML += `
-        <div class="forecast-card">
-          <p><strong>${date}</strong></p>
-          <p>${temp}°C</p>
-        </div>
+      const card = document.createElement("div");
+      card.classList.add("forecast-card");
+
+      card.innerHTML = `
+        <p><strong>${date}</strong></p>
+        <p>${temp}°C</p>
       `;
+
+      forecastDiv.appendChild(card);
     });
 
   } catch (err) {
     console.error("Forecast error:", err);
+
+    const forecastDiv = document.getElementById("forecast");
+    if (forecastDiv) forecastDiv.innerHTML = "<p>Forecast unavailable</p>";
   }
 }
 
@@ -89,13 +107,16 @@ async function getSpotlights() {
     const container = document.getElementById("spotlight-container");
     if (!container) return;
 
+    container.innerHTML = "Loading...";
+
     const res = await fetch("data/members.json");
     if (!res.ok) throw new Error("Members fetch failed");
 
     const data = await res.json();
 
     let members = data.members.filter(m =>
-      m.membership === 2 || m.membership === 3
+      m.membership === 2 || m.membership === 3 ||
+      m.membership === "gold" || m.membership === "silver"
     );
 
     // Randomize + pick 3
@@ -109,11 +130,21 @@ async function getSpotlights() {
 
       card.innerHTML = `
         <h3>${member.name}</h3>
-        <img src="${member.image}" alt="${member.name}">
+
+        <img src="images/${member.image}" 
+             alt="${member.name} logo" 
+             loading="lazy">
+
         <p>${member.address}</p>
         <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-        <p><strong>${member.membership === 3 ? "Gold" : "Silver"}</strong></p>
+
+        <a href="${member.website}" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           Visit Website
+        </a>
+
+        <p><strong>${member.membership === 3 || member.membership === "gold" ? "Gold" : "Silver"}</strong></p>
       `;
 
       container.appendChild(card);
@@ -121,6 +152,9 @@ async function getSpotlights() {
 
   } catch (err) {
     console.error("Spotlight error:", err);
+
+    const container = document.getElementById("spotlight-container");
+    if (container) container.innerHTML = "<p>Spotlights unavailable</p>";
   }
 }
 

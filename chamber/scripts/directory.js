@@ -1,3 +1,6 @@
+// ==============================
+// CONFIG
+// ==============================
 const url = "data/members.json";
 const container = document.querySelector("#members");
 
@@ -5,65 +8,88 @@ const container = document.querySelector("#members");
 // FETCH MEMBERS
 // ==============================
 async function getMembers() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
+  try {
+    if (container) container.innerHTML = "<p>Loading members...</p>";
 
-        displayMembers(data.members); // ✅ FIXED
-    } catch (error) {
-        console.error("Error loading members:", error);
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const data = await response.json();
+
+    displayMembers(data.members);
+  } catch (error) {
+    console.error("Error loading members:", error);
+    if (container) {
+      container.innerHTML = "<p>Failed to load members. Please try again.</p>";
     }
+  }
 }
 
 // ==============================
 // DISPLAY MEMBERS
 // ==============================
 function displayMembers(members) {
-    container.innerHTML = "";
+  if (!container) return;
 
-    members.forEach(member => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+  container.innerHTML = "";
 
-        card.innerHTML = `
-            <img src="data/images/${member.image}" alt="${member.name}" loading="lazy">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit</a>
-        `;
+  members.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-        container.appendChild(card);
-    });
+    card.innerHTML = `
+      <img 
+        src="images/${member.image}" 
+        alt="${member.name} business logo" 
+        loading="lazy"
+        width="150" height="100"
+      >
+
+      <h3>${member.name}</h3>
+
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+
+      <a 
+        href="${member.website}" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Visit ${member.name} website"
+      >
+        Visit Website
+      </a>
+    `;
+
+    container.appendChild(card);
+  });
 }
 
 // ==============================
 // GRID / LIST TOGGLE
 // ==============================
-document.querySelector("#gridView").addEventListener("click", () => {
+const gridBtn = document.querySelector("#gridView");
+const listBtn = document.querySelector("#listView");
+
+if (gridBtn && listBtn && container) {
+  gridBtn.addEventListener("click", () => {
     container.classList.add("grid");
     container.classList.remove("list");
+  });
 
-    document.querySelectorAll(".card img").forEach(img => {
-        img.style.display = "block";
-    });
-});
-
-document.querySelector("#listView").addEventListener("click", () => {
+  listBtn.addEventListener("click", () => {
     container.classList.add("list");
     container.classList.remove("grid");
-
-    document.querySelectorAll(".card img").forEach(img => {
-        img.style.display = "none";
-    });
-});
+  });
+}
 
 // ==============================
 // FOOTER
 // ==============================
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent =
-    "Last Modified: " + document.lastModified;
+const yearEl = document.querySelector("#year");
+const modEl = document.querySelector("#lastModified");
+
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (modEl) modEl.textContent = "Last Modified: " + document.lastModified;
 
 // ==============================
 // INIT

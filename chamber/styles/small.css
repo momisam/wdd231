@@ -51,6 +51,7 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a.active {
@@ -63,6 +64,8 @@ nav a.active {
 ========================= */
 main {
     padding: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 section {
@@ -82,7 +85,6 @@ h2 {
 
 .hero img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -99,6 +101,20 @@ h2 {
 }
 
 /* =========================
+   BUTTONS
+========================= */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid #ffd166;
+    outline-offset: 2px;
+}
+
+/* =========================
    VIEW BUTTONS
 ========================= */
 .view-buttons {
@@ -111,8 +127,6 @@ h2 {
     background: #004080;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
-    margin-right: 0.5rem;
 }
 
 /* =========================
@@ -129,14 +143,14 @@ h2 {
 }
 
 /* =========================
-   CARD (USED FOR DIRECTORY + SPOTLIGHT)
+   CARD (UNIFIED VERSION)
 ========================= */
 .card {
-    background: #ffffff;
+    background: #fff;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
 }
 
@@ -146,11 +160,10 @@ h2 {
 
 .card img {
     width: 100%;
-    max-width: 150px;
-    height: 100px;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
-    margin: 0 auto;
 }
 
 .card h3 {
@@ -172,6 +185,14 @@ h2 {
     text-decoration: none;
 }
 
+.card button {
+    margin-top: 0.5rem;
+    background: #ffd166;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
 /* =========================
    LIST MODE
 ========================= */
@@ -184,11 +205,10 @@ h2 {
 
 #members.list .card img {
     width: 100px;
-    height: 100px;
 }
 
 /* =========================
-   SPOTLIGHT CONTAINER
+   SPOTLIGHT
 ========================= */
 .spotlights {
     display: grid;
@@ -196,14 +216,12 @@ h2 {
 }
 
 .forecast-card {
-  background: #fff;
-  padding: 0.5rem;
-  margin: 0.3rem 0;
-  border-radius: 5px;
-  text-align: center;
+    background: #fff;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    text-align: center;
 }
-
-
 
 /* =========================
    FOOTER
@@ -217,9 +235,8 @@ footer {
 }
 
 /* =========================
-   JOIN PAGE FORM
+   FORM
 ========================= */
-
 form {
     display: flex;
     flex-direction: column;
@@ -228,56 +245,51 @@ form {
     margin: 0 auto;
 }
 
-label {
-    font-weight: bold;
-}
-
 input, select, textarea {
     width: 100%;
     padding: 0.6rem;
-    margin-top: 0.3rem;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: inherit;
 }
 
-textarea {
-    min-height: 100px;
-}
-
-button[type="submit"] {
-    background: #004080;
-    color: white;
-    padding: 0.7rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background: #002b5c;
-}
-
-
-.cards {
-    margin-top: 2rem;
+/* =========================
+   DISCOVER GRID
+========================= */
+#discover-grid {
     display: grid;
     gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
 }
 
-.card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* MEDIUM */
+@media (min-width: 641px) {
+    #discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    #discover-grid img:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
 }
 
-.card button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #ffd166;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* LARGE */
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
 }
