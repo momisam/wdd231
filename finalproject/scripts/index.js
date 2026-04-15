@@ -6,14 +6,9 @@ async function loadFeatured() {
     const container = document.getElementById("featured");
     if (!container) return;
 
-    container.innerHTML = "<p>Loading...</p>";
-
     const res = await fetch("data/businesses.json");
-    if (!res.ok) throw new Error("Failed to fetch");
-
     const data = await res.json();
 
-    // Pick first 3 (or random if you want)
     const businesses = data.businesses.slice(0, 3);
 
     container.innerHTML = "";
@@ -23,7 +18,7 @@ async function loadFeatured() {
       card.classList.add("card");
 
       card.innerHTML = `
-        <img src="${b.image}" alt="${b.name}" loading="lazy">
+        <img src="${b.image}" alt="${b.name}">
         <h3>${b.name}</h3>
         <p>${b.location}</p>
         <p>${b.phone}</p>
@@ -33,18 +28,15 @@ async function loadFeatured() {
     });
 
   } catch (error) {
-    console.error("Featured error:", error);
+    console.error(error);
   }
 }
 
 // ==============================
 // FOOTER
 // ==============================
-const yearEl = document.getElementById("year");
-const modEl = document.getElementById("lastModified");
-
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-if (modEl) modEl.textContent = document.lastModified;
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 
 // ==============================
 // INIT
