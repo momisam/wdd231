@@ -1,5 +1,5 @@
 // ==============================
-// HAMBURGER MENU
+// NAV TOGGLE (MOBILE)
 // ==============================
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
