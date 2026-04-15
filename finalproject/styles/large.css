@@ -1,40 +1,19 @@
 @media (min-width: 768px) {
 
-    /* HEADER LAYOUT */
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        text-align: center;
     }
 
-    /* NAV HORIZONTAL */
-    nav ul {
-        display: flex !important;
-        gap: 2rem;
-        margin: 0;
-        align-items: center;
+    .nav-flex {
+        justify-content: center;
+        gap: 3rem;
     }
 
-    nav ul li {
-        margin: 0;
-    }
-
-    nav a {
-        font-size: 1.2rem;
-    }
-
-    /* HIDE HAMBURGER */
-    #menuBtn {
-        display: none;
-    }
-
-    /* GRID */
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* HERO */
     .hero {
         height: 400px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

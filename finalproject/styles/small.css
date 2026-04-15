@@ -15,48 +15,29 @@ header {
     padding: 1rem;
 }
 
-header h1 {
-    margin: 0;
-}
-
 /* =========================
-   NAV (MOBILE)
+   NAV (FLEX ALWAYS)
 ========================= */
-nav {
-    margin-top: 1rem;
-}
-
-#menuBtn {
-    background: #ffd166;
-    border: none;
-    padding: 0.5rem 0.7rem;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-nav ul {
+.nav-flex {
     list-style: none;
-    display: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     padding: 0;
     margin: 1rem 0 0 0;
 }
 
-nav ul.show {
-    display: block;
+.nav-flex li {
+    margin: 0;
 }
 
-nav ul li {
-    margin: 0.5rem 0;
-}
-
-nav a {
+.nav-flex a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
-nav a.active {
+.nav-flex a.active {
     font-weight: bold;
     border-bottom: 2px solid white;
 }
@@ -111,4 +92,32 @@ footer {
     padding: 1.5rem;
     background-color: #002b5c;
     color: #fff;
+}
+
+/* =========================
+   FEATURED CARDS
+========================= */
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #0A3D73;
+    margin: 0.5rem 0;
+}
+
+.card p {
+    margin: 0.2rem 0;
 }
