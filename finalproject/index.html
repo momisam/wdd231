@@ -6,7 +6,7 @@
 
 <title>Lagos Business Finder</title>
 
-<meta name="description" content="Discover businesses in Lagos easily">
+<meta name="description" content="Discover trusted businesses and services in Lagos">
 <meta name="author" content="Femi S. Moses">
 
 <link rel="icon" href="images/favicon.ico">
@@ -21,32 +21,41 @@
 <body>
 
 <header>
-<h1>Lagos Business Finder</h1>
+  <h1>Lagos Business Finder</h1>
 
-<nav>
-<button id="menuBtn">☰</button>
-<ul id="navMenu">
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="directory.html">Directory</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+  <nav>
+    <button id="menuBtn" aria-label="Toggle Navigation">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
 
-<section class="hero">
-<h2>Find Trusted Businesses in Lagos</h2>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Find Trusted Businesses in Lagos</h2>
+      <p>Explore top services, shops, and professionals near you</p>
+      <a href="directory.html" class="cta-btn">Browse Directory</a>
+    </div>
+  </section>
 
-<section id="featured" class="grid"></section>
+  <!-- FEATURED -->
+  <section>
+    <h2>Featured Businesses</h2>
+    <div id="featured" class="grid"></div>
+  </section>
 
 </main>
 
 <footer>
-<p>Contact: info@lagosbusinessfinder.com | +234 8104643664</p>
-<p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
-<p id="lastModified"></p>
+  <p>Contact: info@lagosbusinessfinder.com | +234 8104643664</p>
+  <p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
+  <p id="lastModified"></p>
 </footer>
 
 </body>
