@@ -1,0 +1,21 @@
+{
+  "businesses": [
+    {"id":1,"name":"Lekki Bites","category":"Restaurant","location":"Lekki","phone":"08011111111","image":"images/food.jpg"},
+    {"id":2,"name":"Yaba Tech Hub","category":"Technology","location":"Yaba","phone":"08022222222","image":"images/tech.jpg"},
+    {"id":3,"name":"Ikeja Salon","category":"Beauty","location":"Ikeja","phone":"08033333333","image":"images/salon.jpg"},
+    {"id":4,"name":"VI Fitness","category":"Fitness","location":"VI","phone":"08044444444","image":"images/gym.jpg"},
+    {"id":5,"name":"Ajah Mart","category":"Retail","location":"Ajah","phone":"08055555555","image":"images/store.jpg"},
+    {"id":6,"name":"Surulere Clinic","category":"Health","location":"Surulere","phone":"08066666666","image":"images/clinic.jpg"},
+    {"id":7,"name":"Lekki Laundry","category":"Service","location":"Lekki","phone":"08077777777","image":"images/laundry.jpg"},
+    {"id":8,"name":"Yaba Books","category":"Education","location":"Yaba","phone":"08088888888","image":"images/books.jpg"},
+    {"id":9,"name":"Ikeja Cars","category":"Automobile","location":"Ikeja","phone":"08099999999","image":"images/car.jpg"},
+    {"id":10,"name":"VI Cafe","category":"Restaurant","location":"VI","phone":"08010101010","image":"images/cafe.jpg"},
+    {"id":11,"name":"Ajah Spa","category":"Beauty","location":"Ajah","phone":"08020202020","image":"images/spa.jpg"},
+    {"id":12,"name":"Surulere Gym","category":"Fitness","location":"Surulere","phone":"08030303030","image":"images/gym.jpg"},
+    {"id":13,"name":"Lekki Tech Repair","category":"Technology","location":"Lekki","phone":"08040404040","image":"images/repair.jpg"},
+    {"id":14,"name":"Yaba Fashion","category":"Retail","location":"Yaba","phone":"08050505050","image":"images/fashion.jpg"},
+    {"id":15,"name":"Ikeja Pharmacy","category":"Health","location":"Ikeja","phone":"08060606060","image":"images/pharmacy.jpg"},
+    {"id":16,"name":"VI Laundry","category":"Service","location":"VI","phone":"08070707070","image":"images/laundry.jpg"},
+    {"id":17,"name":"Ajah School","category":"Education","location":"Ajah","phone":"08080808080","image":"images/school.jpg"}
+  ]
+}

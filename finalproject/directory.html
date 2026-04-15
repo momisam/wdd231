@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Directory</title>
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<script type="module" src="scripts/directory.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Business Directory</h1>
+
+<button id="menuBtn">☰</button>
+
+<nav>
+<ul id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="directory.html" class="active">Directory</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<div class="controls">
+<input type="text" id="search" placeholder="Search business">
+<select id="filter">
+<option value="all">All</option>
+</select>
+</div>
+
+<section id="list" class="grid"></section>
+
+<div id="modal" class="modal hidden"></div>
+
+</main>
+
+<footer>
+<p>Contact: info@lagosbusinessfinder.com | +234 8104643664</p>
+<p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
+<p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

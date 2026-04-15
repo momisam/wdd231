@@ -1,0 +1,295 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: #004080;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* NAV */
+nav {
+    margin-top: 1rem;
+}
+
+#menuBtn {
+    background: #ffd166;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul.show {
+    display: block;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    padding: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.cta {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #ffd166;
+    color: #000;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid #ffd166;
+    outline-offset: 2px;
+}
+
+/* =========================
+   VIEW BUTTONS
+========================= */
+.view-buttons {
+    margin-bottom: 1rem;
+}
+
+.view-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #004080;
+    color: white;
+    border-radius: 5px;
+}
+
+/* =========================
+   MEMBERS GRID
+========================= */
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#members.list {
+    display: block;
+}
+
+/* =========================
+   CARD (UNIFIED VERSION)
+========================= */
+.card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+    color: #004080;
+}
+
+.card p {
+    margin: 0.3rem 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: white;
+    background: #004080;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.card button {
+    margin-top: 0.5rem;
+    background: #ffd166;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* =========================
+   LIST MODE
+========================= */
+#members.list .card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+}
+
+#members.list .card img {
+    width: 100px;
+}
+
+/* =========================
+   SPOTLIGHT
+========================= */
+.spotlights {
+    display: grid;
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: #fff;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #002b5c;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   DISCOVER GRID
+========================= */
+#discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* MEDIUM */
+@media (min-width: 641px) {
+    #discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    #discover-grid img:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+}
+
+/* LARGE */
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
