@@ -1,45 +1,26 @@
-// ==============================
-// LOAD FEATURED BUSINESSES
-// ==============================
+const url = "data/businesses.json";
+
 async function loadFeatured() {
-  try {
-    const container = document.getElementById("featured");
-    if (!container) return;
+  const res = await fetch(url);
+  const data = await res.json();
 
-    const res = await fetch("data/businesses.json");
-    const data = await res.json();
+  const container = document.getElementById("featured");
 
-    // 👉 SHOW 4 BUSINESSES
-    const businesses = data.businesses.slice(0, 4);
+  data.businesses.slice(0, 4).forEach(biz => {
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-    container.innerHTML = "";
+    card.innerHTML = `
+      <img src="${biz.image}" alt="${biz.name}">
+      <h3>${biz.name}</h3>
+      <p>${biz.location}</p>
+    `;
 
-    businesses.forEach(b => {
-      const card = document.createElement("div");
-      card.classList.add("card");
-
-      card.innerHTML = `
-        <img src="${b.image}" alt="${b.name}">
-        <h3>${b.name}</h3>
-        <p>${b.location}</p>
-        <p>${b.phone}</p>
-      `;
-
-      container.appendChild(card);
-    });
-
-  } catch (error) {
-    console.error("Featured error:", error);
-  }
+    container.appendChild(card);
+  });
 }
 
-// ==============================
-// FOOTER
-// ==============================
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// ==============================
-// INIT
-// ==============================
 loadFeatured();

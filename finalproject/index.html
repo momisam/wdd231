@@ -4,12 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lagos Business Finder</title>
+<title>Lagos Business Finder | Discover Trusted Services in Lagos</title>
 
-<meta name="description" content="Discover trusted businesses in Lagos">
+<meta name="description" content="Discover trusted businesses, services, and professionals in Lagos. Explore restaurants, tech hubs, salons, and more in one powerful directory platform.">
 <meta name="author" content="Femi S. Moses">
 
+<!-- OPEN GRAPH (FIXED ✅) -->
+<meta property="og:title" content="Lagos Business Finder - Discover Trusted Services">
+<meta property="og:description" content="Find verified businesses in Lagos including restaurants, tech hubs, salons, and more.">
+<meta property="og:image" content="https://yourdomain.com/images/hero.jpg">
+<meta property="og:url" content="https://yourdomain.com/index.html">
+
 <link rel="icon" href="images/favicon.ico">
+
+<!-- GOOGLE FONTS (FIXED ✅) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
@@ -24,7 +35,7 @@
   <h1>Lagos Business Finder</h1>
 
   <nav>
-    <ul class="nav-flex">
+    <ul id="navMenu">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="directory.html">Directory</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -34,20 +45,22 @@
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO (FIXED IMAGE + OVERLAY) -->
+<section class="hero">
+  <div class="hero-overlay">
     <div class="hero-content">
       <h2>Find Trusted Businesses in Lagos</h2>
       <p>Explore top services, shops, and professionals near you</p>
       <a href="directory.html" class="cta-btn">Browse Directory</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURED -->
-  <section>
-    <h2>Featured Businesses</h2>
-    <div id="featured" class="grid"></div>
-  </section>
+<!-- FEATURED -->
+<section>
+  <h2>Featured Businesses</h2>
+  <div id="featured" class="featured-grid"></div>
+</section>
 
 </main>
 

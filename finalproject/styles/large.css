@@ -1,40 +1,11 @@
 @media (min-width: 768px) {
 
-    /* 4 CARDS SIDE BY SIDE */
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  nav ul {
+    justify-content: flex-end;
+  }
 
-    .hero {
-        height: 400px;
-    }
-}
+  .featured-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-@media (min-width: 768px) {
-
-    .contact-modern {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .contact-left {
-        flex: 1;
-    }
-
-    .contact-right {
-        flex: 1;
-        text-align: center;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .controls {
-        justify-content: center;
-    }
 }

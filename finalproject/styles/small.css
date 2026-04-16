@@ -1,375 +1,85 @@
-/* =========================
-   GLOBAL
-========================= */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
-    background: #0A3D73;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+  background: #0A3D73;
+  color: white;
+  padding: 1rem;
 }
 
-/* =========================
-   NAV (FLEX)
-========================= */
-.nav-flex {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 1rem 0 0 0;
+header h1 {
+  margin: 0;
 }
 
-.nav-flex a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
 }
 
-.nav-flex a.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO FIX */
 .hero {
-    position: relative;
-    height: 300px;
-    background: url("../images/lagos.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  height: 60vh;
+  position: relative;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
-    position: relative;
-    text-align: center;
-    color: white;
+  color: white;
+  text-align: center;
+  max-width: 600px;
 }
 
 .cta-btn {
-    background: #ffd166;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    color: black;
-    font-weight: bold;
+  background: #ffd166;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* =========================
-   GRID (2 PER ROW MOBILE)
-========================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+/* FEATURE GRID */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* =========================
-   CARD
-========================= */
 .card {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
 }
 
 .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
-.card h3 {
-    color: #0A3D73;
-}
-
-/* =========================
-   MODERN CONTACT DESIGN
-========================= */
-.contact-modern {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-/* LEFT SIDE */
-.contact-left h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* INPUT BOX STYLE */
-.input-box {
-    background: #e6edf3;
-    border-radius: 30px;
-    padding: 0.8rem 1rem;
-    margin-bottom: 1rem;
-}
-
-.input-box input,
-.input-box textarea {
-    width: 100%;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 1rem;
-}
-
-/* BUTTON */
-.contact-left button {
-    width: 100%;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(to right, #00b4db, #0083b0);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.contact-left button:hover {
-    opacity: 0.9;
-}
-
-/* RIGHT SIDE IMAGE */
-.contact-right img {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-}
-
-
-
-/* =========================
-   CONTROLS
-========================= */
-.controls {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem;
-}
-
-/* =========================
-   GRID FIX
-========================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-/* =========================
-   CARD (PROFESSIONAL)
-========================= */
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 1rem;
-    text-align: center;
-}
-
-.card h3 {
-    margin: 0.5rem 0;
-    color: #0A3D73;
-}
-
-/* BUTTON */
-.card button {
-    margin-top: 0.5rem;
-    background: #0A3D73;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-/* =========================
-   MODAL
-========================= */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.hidden {
-    display: none;
-}
-
-.modal-content {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    width: 300px;
-}
-
-#closeModal {
-    cursor: pointer;
-    float: right;
-    font-size: 1.2rem;
-}
-
-
-/* =========================
-   PREMIUM CONTROLS
-========================= */
-.controls {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center;
-}
-
-.controls input,
-.controls select {
-    padding: 0.6rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-/* =========================
-   PREMIUM GRID
-========================= */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-/* =========================
-   PREMIUM CARD
-========================= */
-.card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-/* IMAGE EFFECT */
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.1);
-}
-
-/* BODY */
-.card-body {
-    padding: 1rem;
-    text-align: center;
-}
-
-.card h3 {
-    margin: 0.5rem 0;
-    color: #0A3D73;
-}
-
-/* BUTTON */
-.card button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(to right, #0A3D73, #0056b3);
-    color: white;
-    cursor: pointer;
-}
-
-.card button:hover {
-    opacity: 0.9;
-}
-
-/* =========================
-   MODAL PREMIUM
-========================= */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.hidden {
-    display: none;
-}
-
-.modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    width: 320px;
-    text-align: center;
-}
-
-#closeModal {
-    float: right;
-    cursor: pointer;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #002b5c;
-    color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  background: #002b5c;
+  color: white;
 }
