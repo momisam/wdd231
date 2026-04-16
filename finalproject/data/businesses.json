@@ -11,11 +11,11 @@
     {"id":9,"name":"Ikeja Cars","category":"Automobile","location":"Ikeja","phone":"08099999999","image":"images/car.jpg"},
     {"id":10,"name":"VI Cafe","category":"Restaurant","location":"VI","phone":"08010101010","image":"images/cafe.jpg"},
     {"id":11,"name":"Ajah Spa","category":"Beauty","location":"Ajah","phone":"08020202020","image":"images/spa.jpg"},
-    {"id":12,"name":"Surulere Gym","category":"Fitness","location":"Surulere","phone":"08030303030","image":"images/gym.jpg"},
+    {"id":12,"name":"Surulere Gym","category":"Fitness","location":"Surulere","phone":"08030303030","image":"images/gym2.jpg"},
     {"id":13,"name":"Lekki Tech Repair","category":"Technology","location":"Lekki","phone":"08040404040","image":"images/repair.jpg"},
     {"id":14,"name":"Yaba Fashion","category":"Retail","location":"Yaba","phone":"08050505050","image":"images/fashion.jpg"},
     {"id":15,"name":"Ikeja Pharmacy","category":"Health","location":"Ikeja","phone":"08060606060","image":"images/pharmacy.jpg"},
-    {"id":16,"name":"VI Laundry","category":"Service","location":"VI","phone":"08070707070","image":"images/laundry.jpg"},
-    {"id":17,"name":"Ajah School","category":"Education","location":"Ajah","phone":"08080808080","image":"images/school.jpg"}
+    {"id":16,"name":"Ikoyi Laundry","category":"Service","location":"Ikoyi","phone":"08070707070","image":"images/laundry2.jpg"},
+    {"id":17,"name":"NAF Ikeja School","category":"Education","location":"Ikeja","phone":"08080808080","image":"images/school.jpg"}
   ]
 }
