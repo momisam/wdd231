@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Directory</title>
+<title>Business Directory</title>
 
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
@@ -16,38 +16,44 @@
 <body>
 
 <header>
-<h1>Business Directory</h1>
+  <h1>Business Directory</h1>
 
-<button id="menuBtn">☰</button>
-
-<nav>
-<ul id="navMenu">
-<li><a href="index.html">Home</a></li>
-<li><a href="directory.html" class="active">Directory</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+  <nav>
+    <ul class="nav-flex">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
 
+<!-- CONTROLS -->
 <div class="controls">
-<input type="text" id="search" placeholder="Search business">
-<select id="filter">
-<option value="all">All</option>
-</select>
+  <input type="text" id="search" placeholder="🔍 Search businesses...">
+  <select id="filter">
+    <option value="all">All Categories</option>
+  </select>
 </div>
 
+<!-- GRID -->
 <section id="list" class="grid"></section>
 
-<div id="modal" class="modal hidden"></div>
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <div id="modalData"></div>
+  </div>
+</div>
 
 </main>
 
 <footer>
-<p>Contact: info@lagosbusinessfinder.com | +234 8104643664</p>
-<p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
-<p id="lastModified"></p>
+  <p>Contact: info@lagosbusinessfinder.com | +234 8104643664</p>
+  <p>&copy; <span id="year"></span> | FEMI S. MOSES | WDD 231</p>
+  <p id="lastModified"></p>
 </footer>
 
 </body>

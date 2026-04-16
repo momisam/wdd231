@@ -27,3 +27,14 @@
         text-align: center;
     }
 }
+
+@media (min-width: 768px) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .controls {
+        justify-content: center;
+    }
+}
