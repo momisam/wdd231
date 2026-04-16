@@ -9,7 +9,8 @@ async function loadFeatured() {
     const res = await fetch("data/businesses.json");
     const data = await res.json();
 
-    const businesses = data.businesses.slice(0, 3);
+    // 👉 SHOW 4 BUSINESSES
+    const businesses = data.businesses.slice(0, 4);
 
     container.innerHTML = "";
 
@@ -28,7 +29,7 @@ async function loadFeatured() {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Featured error:", error);
   }
 }
 

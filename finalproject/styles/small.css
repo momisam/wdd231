@@ -13,10 +13,11 @@ header {
     background: #0A3D73;
     color: white;
     padding: 1rem;
+    text-align: center;
 }
 
 /* =========================
-   NAV (FLEX ALWAYS)
+   NAV (FLEX)
 ========================= */
 .nav-flex {
     list-style: none;
@@ -27,14 +28,10 @@ header {
     margin: 1rem 0 0 0;
 }
 
-.nav-flex li {
-    margin: 0;
-}
-
 .nav-flex a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .nav-flex a.active {
@@ -77,11 +74,39 @@ header {
 }
 
 /* =========================
-   GRID
+   GRID (SIDE BY SIDE)
 ========================= */
 .grid {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #0A3D73;
 }
 
 /* =========================
@@ -92,32 +117,4 @@ footer {
     padding: 1.5rem;
     background-color: #002b5c;
     color: #fff;
-}
-
-/* =========================
-   FEATURED CARDS
-========================= */
-.card {
-    background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 100%;
-    max-width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.card h3 {
-    color: #0A3D73;
-    margin: 0.5rem 0;
-}
-
-.card p {
-    margin: 0.2rem 0;
 }
